@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>文档 Agent 工作台</title><link rel="stylesheet" href="/styles.css"><script defer src="/app.js"></script></head>
+<body><div class="workspace">
+<aside class="sidebar"><a class="brand" href="/">▤ <span>文档 Agent<small>DOCUMENT WORKBENCH</small></span></a><div class="nav-item">▱　文档处理</div><div class="sidebar-note"><b>一个可追溯的学习资料工作流</b><p>保留来源、固定词格、检查模型结果，再导出学习记录。</p></div><div class="sidebar-bottom">来自真实书籍处理系统的独立案例<br>Node.js · TypeScript · 本地检查点</div></aside>
+<main><header><div><div class="eyebrow">DOCUMENT → LEARNING RECORDS</div><h1>把原文变成可检查的学习资料</h1><p>从文本提取到语境释义，每一步都有结果与来源。</p></div><span class="badge" id="mode-badge">离线演示</span></header>
+<div class="toolbar"><div class="tabs"><button class="selected" id="demo-mode">离线演示</button><button id="live-mode">连接真实模型</button></div><span id="mode-note">预置英文与标注样例 · 不调用模型</span></div>
+<div class="top-grid"><section class="panel source"><div class="section-heading"><h2>01　原始文档</h2><span>English · TXT / Markdown</span></div><textarea id="source-text" aria-label="英文原文" spellcheck="false">A small team builds a research station near the ocean.
+The scientists collect water samples every morning.
+Careful records help the team compare results over time.
+When a storm arrives, the station keeps its data safe.</textarea><div class="source-actions"><span id="source-caption">内置短文，由本项目独立编写</span><button class="primary" id="run">运行演示</button></div><p id="error" role="alert"></p></section>
+<section class="panel metrics"><div class="section-heading"><h2>本次运行</h2><span class="state" id="run-state">等待运行</span></div><div class="metrics-grid"><div><small>句子记录</small><strong id="sentence-count">—</strong></div><div><small>缓存命中</small><strong id="cache-count">—</strong></div><div><small>模型请求</small><strong id="request-count">—</strong></div><div><small>来源校验</small><strong id="valid-state">—</strong></div></div><div class="run-meta"><span>运行编号</span><code id="run-id">尚未开始</code></div><div class="run-meta"><span>Token 用量</span><b id="token-count">未采集</b></div></section></div>
+<section class="panel workflow"><div class="section-heading"><h2>02　处理流程</h2><span>8 个节点 · 本地与 AI 分工</span></div><div id="nodes" class="nodes"></div><div class="workflow-note">缓存键包含来源句子、运行模式、模型配置与处理版本。只有通过来源与词格校验的结果可导出。</div></section>
+<section class="panel results"><div class="section-heading"><div><h2>03　学习记录</h2><p>原句保留，翻译与语境释义附在原有位置。</p></div><a id="export" class="download" hidden>导出 JSONL ↗</a></div><div id="records"><div class="empty">运行文档后，在这里检查结构化结果。</div></div></section>
+<section class="panel history"><div class="section-heading"><h2>运行记录</h2><span>本地保存，可查看完成与失败</span></div><div id="history"></div></section>
+<footer>演示模式使用预置标注，不代表模型推理。真实模式需要服务端配置供应商。独立版不包含原系统的 OCR 与 spaCy。</footer></main></div></body></html>

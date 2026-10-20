@@ -1,0 +1,31 @@
+{
+  "name": "document-agent-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=26.0.0"
+  },
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/server.ts --demo",
+    "process": "tsx src/cli.ts",
+    "screenshots": "node scripts/capture-readme.mjs"
+  },
+  "dependencies": {
+    "zod": "4.5.4",
+    "jszip": "3.10.1",
+    "mammoth": "1.11.0",
+    "cheerio": "1.1.2"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "tsx": "4.23.13",
+    "@types/node": "26.4.1",
+    "playwright": "1.62.0"
+  }
+}

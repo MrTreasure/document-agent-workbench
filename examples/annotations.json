@@ -1,0 +1,36 @@
+{
+  "translations": [
+    "一个小团队在海边建造了一座研究站。",
+    "科学家们每天早晨采集水样。",
+    "仔细的记录帮助团队比较不同时期的结果。",
+    "风暴来临时，研究站会保护好它的数据。"
+  ],
+  "dictionary": {
+    "small": "小的",
+    "team": "团队",
+    "builds": "建造",
+    "research": "研究",
+    "station": "站点",
+    "near": "在附近",
+    "ocean": "海洋",
+    "scientists": "科学家",
+    "collect": "收集",
+    "water": "水",
+    "samples": "样本",
+    "every": "每一",
+    "morning": "早晨",
+    "careful": "仔细的",
+    "records": "记录",
+    "help": "帮助",
+    "compare": "比较",
+    "results": "结果",
+    "over": "跨越",
+    "time": "时间",
+    "when": "当……时",
+    "storm": "风暴",
+    "arrives": "到来",
+    "keeps": "保持",
+    "data": "数据",
+    "safe": "安全的"
+  }
+}
